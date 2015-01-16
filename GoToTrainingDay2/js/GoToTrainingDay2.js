@@ -60,11 +60,19 @@ console.log(yearsMore);
 var futureAge = Number(age)+parseInt(yearsMore);
 console.log(futureAge);
 
+//Create a final out text string variable
+var finalOutput = "You will be "+futureAge+" in "+yearsMore+" years.";
+
+console.log(finalOutput);
+alert(finalOutput);
+
+/*
 var a = Number("40 years old");
 console.log(a);
 
 var b = Number("40");
 console.log(b);
+//Returns NaN - Not a Number
 
 var c = parseInt("40");
 console.log(c);
@@ -74,3 +82,4 @@ console.log(d);
 
 var f = parseInt("I am 40 years old");
 console.log(f);
+*/
