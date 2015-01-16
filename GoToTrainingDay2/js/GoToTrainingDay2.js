@@ -27,7 +27,50 @@ console.log(yearBorn);
 var currentYear=2015;
 
 //Calculate the age - create a variable for results
+//2015 - "1975" - 1  = 36
 var age=currentYear-yearBorn-1;
 
 console.log(name+" you are "+age+" years old.");
 alert(name+" you are "+age+" years old.");
+
+//Make it MORE complex
+
+//Ask user how many years in the future they would like to know their age.
+
+var yearsMore = prompt("How many years in the future would you like to know your age?");
+
+console.log(yearsMore);
+
+//Calculate future age
+
+// + plus sign does double duty - ADDition and Concatenation
+
+//prompts ONLY return text strings!
+
+// 10 - returns "10"
+
+//"3910" not equal #3910
+
+//Casting or Parsing an integer
+
+//Casting - Number() is when we treat one variable type as another temporarily
+
+//parseInt() looks for a leading number in a text string
+
+var futureAge = Number(age)+parseInt(yearsMore);
+console.log(futureAge);
+
+var a = Number("40 years old");
+console.log(a);
+
+var b = Number("40");
+console.log(b);
+
+var c = parseInt("40");
+console.log(c);
+
+var d = parseInt("40 years old");
+console.log(d);
+
+var f = parseInt("I am 40 years old");
+console.log(f);
