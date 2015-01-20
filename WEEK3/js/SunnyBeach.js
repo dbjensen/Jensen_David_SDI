@@ -17,3 +17,9 @@ Video: Logic Operators
  }else{
    console.log("No phone for you!!");
  }
+/*
+a === b === c is not the proper way to compare all three variables.  The boolean result from a === b is true but true === c will give you an error.
+Instead write this: a === b && b === c.
+Relational Operators go in between PAIRS of objects.
+Logical Operators go in between Relational Expressions or Boolean values.
+ */
