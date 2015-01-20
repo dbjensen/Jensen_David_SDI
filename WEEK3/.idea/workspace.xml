@@ -38,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/js/SunnyBeach.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.36726806" vertical-offset="0" max-vertical-offset="776">
-              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -228,7 +228,7 @@
     <entry file="file://$PROJECT_DIR$/js/SunnyBeach.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36726806" vertical-offset="0" max-vertical-offset="776">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
