@@ -7,23 +7,40 @@
  */
  //alert("Testing to see if the JS file is attached to the HTML.");
 
-
+//Declaring  and assigning variables
  var blindsType;
  var winNum;
- var material;
+ var material = ["wood", "aluminum", "vinyl"];
  var completeCare;
+ var woodFlatRate = 60.00;
+ var woodPerWin = 70.00;
+ var vinylWideFlatRate = 40.00;
+ var vinylWidePerWin = 50.00;
+ var vinylThinFlatRate;
+ var
+ var aBlindFlatRate;
 
- blindsType = prompt("Please type whether you want thin or wide blinds.");                                                           //Assigning variable through prompt for blindsTyp
- blindsType = blindsType.toLowerCase();
-
+ blindsType = prompt("Please type whether you want thin or wide blinds.");
  if(blindsType != "thin" && blindsType != "wide"){
-  console.log("Incorrect option");
   blindsType = prompt("Please type thin or wide");
- }else if(blindsType === "" ){
-  blindsType = prompt("Oops! Please don't leave blank. Type thin or wide");
  }else{
   console.log(blindsType);
  }
+
+ winNum = prompt("How many windows will be treated?");
+ if(isNaN(winNum) || winNum === ""){
+  prompt("Please use only a number and don't leave blank.  How many windows will be treated?");
+ }else{
+  console.log(winNum);
+ }
+
+ material = ;
+ completeCare;
+ //Assigning variable through prompt for blindsTyp
+ blindsType = blindsType.toLowerCase();
+
+
+
 
 
 
