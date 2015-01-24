@@ -30,60 +30,92 @@
  var vinylSkinnyPerWin = 40.00;
 
  //Prompt user for thin or wide blinds
- blindsType = prompt("Would you like thin or wide blinds?");
- //Make answers lower case
- blindsType = blindsType.toLowerCase();
  //Validating user input for blindsType
- if(blindsType != "thin" && blindsType != "wide"){
-     //Answer was not thin or wide
-     blindsType = prompt("Please type thin or wide");
- }else if(blindsType === ""){
-     //Was the answer left blank
-     blindsType = prompt("Please do not leave blank. Type thin or wide.");
- }else{
-     //console.log out the answer
-     console.log("Client wants the "+blindsType+" blinds");
+ //do while statement
+ do{
+  blindsType = prompt("Please answer with the words thin or wide. Would you like thin or wide blinds?");
+  //Make answers lower case
+  blindsType = blindsType.toLowerCase();
  }
+ while (blindsType != "thin" && blindsType != "wide" === true);
+ //Write answer to console.log
+ console.log("Client wants the "+blindsType+" blinds");
 
  //Prompt user for number of windows to treat
- winNum = prompt("How many windows will be treated?");
- //Validating user input for winNum
- if(isNaN(winNum)){
-     //Was winNum a number
-     winNum = prompt("Please use only a number and don't leave blank.  How many windows will be treated?");
- }else if(winNum === ""){
-     //Was the answer left blank
-     winNum = prompt("Please do not leave empty.  How many windows will be treated?");
- }else{
-     //console.log out the answer
-     console.log("Client wants "+winNum+" windows treated");
+ //Validating user input as a number
+ //do while statement
+ do{
+  winNum = prompt("Please answer with a number. How many windows will be treated?");
  }
+ while (isNaN(winNum) == true);
+ //Write answer to console.log
+ console.log("Client wants "+winNum+" windows treated.");
 
- //Prompt for Boolean will the whole house be treated
- completeCare = prompt("Will the whole building be treated, Please answer with yes or no");
- //Make answers lower case
- completeCare = completeCare.toLowerCase();
+ //Prompt for user for yes or no. Will the whole house be treated?
  //Validating user input for completeCare
- if(completeCare != "yes" && completeCare != "no"){
-    //Answer was not yes or no
-    completeCare = prompt("Please answer with yes or no. Will the whole building be treated?");
- }else if(completeCare === ""){
-    //Answer was left blank
-    completeCare = prompt("Please do not leave blank. Will the whole building be treated? Answer with yes or no");
- }else{
-    //console.log out the answer
-    console.log("Client answered "+completeCare+" to having all windows treated.");
+ //do while statement
+ do{
+  completeCare = prompt("Please answer with the words yes or no. Will the whole building be treated?");
+  //Make answers lower case
+  completeCare = completeCare.toLowerCase();
  }
+ while (completeCare != "yes" && completeCare != "no" ===true);
+ //Write answer to console.log
+ console.log("Client answered "+completeCare+" to having all windows treated.");
 
-
+ //Prompt user for wood or vinyl
  //Validating user input for material
- material = prompt("We offer either wood or vinyl");
- //
- if(material != "wood" && material != "vinyl"){
-  material = prompt("Please type wood or vinyl");
- }else{
-  console.log("Client wants the "+material+" type of blinds");
+ //do while statement
+ do{
+  material = prompt("Please answer with the words wood or vinyl. Would you like wood or vinyl blinds?");
+  //Make answers lower case
+  material = material.toLowerCase();
  }
+ while (material != "wood" && material != "vinyl" === true);
+ //Write answer to console.log
+ console.log("Client wants the "+material+" type of blinds");
+
+ //else if statement to combine flatRate versus perWin and wood versus vinyl comparing user input choices
+ if(winNum >= 5 && material === "wood" && blindsType === "wide"){
+  console.log("Client wants "+winNum+" windows treated with "+material+" blinds at $"+woodWideFlatRate+" per window.");
+ }else if(winNum >= 5 && material === "wood" && blindsType === "thin"){
+  console.log("Client wants "+winNum+" windows treated with "+material+" blinds at $"+woodSkinnyFlatRate+" per window.");
+ }else if(winNum < 5 && material === "wood" && blindsType === "wide"){
+  console.log("Client wants "+winNum+" windows treated with "+material+" blinds at $"+woodWidePerWin+" per window.");
+ }else if(winNum < 5 && material === "wood" && blindsType === "thin"){
+  console.log("Client wants "+winNum+" windows treated with "+material+" blinds at $"+woodSkinnyPerWin+" per window.");
+ }else if(winNum >= 5 && material === "vinyl" && blindsType === "wide"){
+  console.log("Client wants "+winNum+" windows treated with "+material+" blinds at $"+vinylWideFlatRate+" per window");
+ }else if(winNum >= 5 && material === "vinyl" && blindsType === "thin"){
+  console.log("Client wants "+winNum+" windows treated with "+material+" blinds at $"+vinylSkinnyFlatRate+" per window.");
+ }else if(winNum < 5 && material === "vinyl" && blindsType === "wide"){
+  console.log("Client wants "+winNum+" windows treated with "+material+" blinds at $"+vinylWidePerWin+" per window.");
+ }else{
+  console.log("Client wants "+winNum+" windows treated with "+material+" blinds at $"+vinylSkinnyPerWin+" per window.")
+ }
+
+
+
+ //else if statement to separate wide from thin blinds
+ //if(console.log())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
