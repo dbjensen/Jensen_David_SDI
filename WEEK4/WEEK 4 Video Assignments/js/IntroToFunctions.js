@@ -2,7 +2,7 @@
  /*
 David Jensen
 SDI Section #3
-Functions - Function Execution
+Functions - Variable Scope
 2015/01/24
  */
 //alert("Testing to see if the JS file is attached to the HTML.");
@@ -11,6 +11,7 @@ Functions - Function Execution
   console.log("Hello World");
  }
 
+var width = 5;
 
 function calcArea(){
  var width = 20;
@@ -19,11 +20,8 @@ function calcArea(){
  console.log(area);
 }
 
-
- calcArea();
- calcArea();
  calcArea();
 
-
+ console.log(width);
 
 
