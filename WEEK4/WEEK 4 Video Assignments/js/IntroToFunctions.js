@@ -2,23 +2,29 @@
  /*
 David Jensen
 SDI Section #3
-Functions - Arguments and Parameters
-2015/01/24
+Functions - Returning Values
+2015/01/25
  */
 //alert("Testing to see if the JS file is attached to the HTML.");
 
-function dogYears(age){          //Parameters...Storage container of function
- var dogYears = age * 7;
- console.log("Sparky is "+dogYears+" years old");
-}
+ var total = calcArea(30, 20);
 
- var age1 = 4;                    //Arguments...sending value or variable
+ function calcArea(w, h){
+  var area = w * h;
+  return area;        //function spitting the info out
+ }
+ console.log(total);
 
- dogYears(4);
- dogYears(5);
- dogYears(6);
 
- dogYears(age1);
+
+ var power = calcPower(70, 190);
+
+ function calcPower(s, m){
+  var p = s * m;
+  return p;
+ }
+
+ console.log(power);
 
 
 
