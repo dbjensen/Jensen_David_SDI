@@ -2,7 +2,7 @@
  /*
 David Jensen
 SDI Section #3
-Basic Function Structure
+Functions - Function Execution
 2015/01/24
  */
 //alert("Testing to see if the JS file is attached to the HTML.");
@@ -20,8 +20,9 @@ function calcArea(){
 }
 
 
-
-
+ calcArea();
+ calcArea();
+ calcArea();
 
 
 
