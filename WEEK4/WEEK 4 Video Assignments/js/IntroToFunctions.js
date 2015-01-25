@@ -2,26 +2,24 @@
  /*
 David Jensen
 SDI Section #3
-Functions - Variable Scope
+Functions - Arguments and Parameters
 2015/01/24
  */
 //alert("Testing to see if the JS file is attached to the HTML.");
 
- function outPutMsg(){
-  console.log("Hello World");
- }
-
-var width = 5;
-
-function calcArea(){
- var width = 20;
- var height = 30;
- var area = width * height;
- console.log(area);
+function dogYears(age){          //Parameters...Storage container of function
+ var dogYears = age * 7;
+ console.log("Sparky is "+dogYears+" years old");
 }
 
- calcArea();
+ var age1 = 4;                    //Arguments...sending value or variable
 
- console.log(width);
+ dogYears(4);
+ dogYears(5);
+ dogYears(6);
+
+ dogYears(age1);
+
+
 
 
