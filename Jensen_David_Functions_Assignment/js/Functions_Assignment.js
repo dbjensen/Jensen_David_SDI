@@ -15,13 +15,14 @@ Functions_Assignment
  var name = prompt("Please type your name!");                                                                           //Declaring name with prompt.
  do{
    name = prompt("Please do not leave your name blank. Please type your name!")
- }while (name === "" = true);
+ }while (name === "");
 
+do{
+   name = prompt("Please do not type numbers here. Please type your name!")
+}while(name === (isNaN));
 
- while(name != (isNaN)) {
-  do name = prompt("Please do not type numbers here. Please type your name!")
- }
  console.log("Hello " + name + ".");
+
  //User input pool type (Rectangular or circular).
  //User input pool measurements.
  var rectanglePool;                                                                                                     //Declaring pool type rectangle.
