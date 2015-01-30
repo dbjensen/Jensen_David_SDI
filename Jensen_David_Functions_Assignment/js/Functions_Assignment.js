@@ -10,6 +10,7 @@ Functions_Assignment
 //Calculator to estimate how much chlorine is needed to be in a pool.  User input to get size of pool and find the amount of gallons it can hold.
 
  var name = prompt("Please type your name: ");                                                                           //Declaring name and defining with prompt.
+
  var rVolL;                                                                                                              //Declaring pool type rectangle.
  var rVolW;                                                                                                              //Declaring pool type rectangle.
  var rVolH;                                                                                                              //Declaring pool type rectangle.
@@ -24,31 +25,114 @@ Functions_Assignment
    name = prompt("Please do not use numbers here. Please type your name: ");                                             //Re-prompting to match second condition.
   }                                                                                                                      //Close if.
  }                                                                                                                       //Close while.
+
  console.log("Clients name is "+name+".");                                                                               //Console log Client name.
 
+ poolType = prompt("Please choose your pool type.\nType either R for rectangle or C for circle:");                       //Prompting user for pool type.
+ poolType = poolType.toLowerCase();                                                                                      //Make poolType value all lower case.
 
- poolType = prompt(name+", please choose your pool type.\nType either R for rectangle or C for circle:");
- poolType = poolType.toLowerCase();
+ while(poolType != "r" && poolType != "c"){                                                                              //"while loop" validating poolType results.
+  poolType = prompt("Please enter only R for Rectangle or C for Circle.");                                               //Re-prompting for poolType.
+ }                                                                                                                       //Close "while loop".
 
- while(poolType === "" || (!isNaN(poolType)) || poolType != "r" || poolType != "c"){
+ if(poolType != "r"){                                                                                                    //validate poolType and assignment for the action of the "if statement".
+  cVolD = prompt("Please type in the diameter of the pool in inches:");                                                  //Prompting for diameter of pool in inches.
+  cVolH = prompt("Please type in the height of the pool in inches:");                                                    //Prompting for height of pool in inches.
+  console.log("You have a circular pool with a diameter of "+cVolD+" inches and a height of "+cVolH+" inches.");         //Console log verification poolType and measurements.
+ }                                                                                                                       //Close "if statement".
+
+ if(poolType != "c"){                                                                                                    //validate poolType and assignment for the action of the "if statement".
+  rVolL = prompt("Please type in the length of the pool in inches:");                                                    //Prompting for length of pool in inches.
+  rVolW = prompt("Please type in the width of the pool in inches:");                                                     //Prompting for width of pool in inches.
+  rVolH = prompt("Please type in the height of the pool in inches:");                                                    //Prompting for height of pool in inches.
+  //Console log verification poolType and measurements.
+  console.log("You have a rectangular pool with the length of "+rVolL+" inches, width of "+rVolW+" inches, and height of "+rVolH+" inches.");
+ }                                                                                                                       //Close "if statement".
+
+ function poolVolRectangle(rectangleLength, rectangleWidth, rectangleHeight){                                            //Function to calculate volume of rectangular pool in cubic inches.
+  var rectangleVolume = Number(rectangleLength * rectangleWidth * rectangleHeight);                                      //Expression for Volume by use of user input.
+  return rectangleVolume;                                                                                                //Returning volume of rectangle.
+ }                                                                                                                       //Close "if statement".
+
+ function poolVolCircle(circleDiameter, circleHeight){                                                                   //Function to calculate volume of circular pool in cubic inches.
+  var circleVolume = Number(Math.PI * ((circleDiameter / 2) * (circleDiameter / 2)) * circleHeight);                     //Expression for Volume by use of user input.
+  return circleVolume;                                                                                                   //Returning volume of circle.
+ }                                                                                                                       //Close "if statement".
+
+ if(poolType != "c"){                                                                                                    //"if statement".
+  var resultsR = poolVolRectangle(rVolL, rVolW, rVolH);                                                                  //Declaring function variables calling function for rectangular pool.
+  console.log(resultsR);                                                                                                 //Console log in cubic inches.
+ }else{                                                                                                                  //"else statement second option.
+  var resultsC = poolVolCircle(cVolD, cVolH);                                                                            //Declaring function variables calling function for circular pool.
+  console.log(resultsC);                                                                                                 //Console log in cubic inches.
+ }                                                                                                                       //Close "if statement".
+
+
+
+
+
+
+
+
+ /*
+ while(poolType === "" && poolType != "r" && poolType != "c" && (!isNaN(poolType)){
   if(poolType === ""){
-   poolType = prompt(name+", please do not leave this blank. Type either R for rectangular or C for circular:");
+   poolType = prompt("Please do not leave blank. Please type R for Rectangle or C for Circle:");
+  }else if(poolType != "r" && poolType != "c"){
+   poolType = prompt("Please only type either R for Rectangle or C for Circle:");
   }else if(!isNaN(poolType)){
-   poolType = prompt(name+", please do not use numbers here. Type either R for rectangular or C for circular:");
-  }else if(poolType != "r"){
-   poolType = prompt(name+", please only use the correct letters as listed. Type either R for rectangular or C for circular:");
-  }else if(poolType != "c"){
-   poolType = prompt(name+", please only use the correct letters as listed. Type either R for rectangular or C for circular:");
+   poolType = prompt("Please do not type numbers here.  Type either R for Rectangle or C for Circle:");
   }else{
    console.log(poolType);
   }
+  console.log("You have selected a rectangular pool.");
  }
- 
 
 
 
 
-/*
+
+
+ if(poolType = "c"){
+  console.log("You have selected a circular pool.");
+ }
+
+ if(poolType = "r"){
+  rVolL = prompt("Please type in the length of the pool in inches.");
+  rVolW = prompt("Please type in the width of the pool in inches.");
+  rVolH = prompt("Please type in the height of the pool in inches.");
+  cVolD = 0;
+  cVolH = 0;
+ }else{
+  cVolD = prompt("Please type in the diameter of the pool.");
+  cVolH = prompt("Please type in the height of the pool.");
+  rVolL = 0;
+  rVolW = 0;
+  rVolH = 0;
+ }
+
+
+
+
+
+
+
+ if(poolType === ""){
+  poolType = prompt(name + ", please only use the correct letters as listed. Type either R for rectangular or C for circular:");
+ }else if(!isNaN(poolType)){
+  poolType = prompt(name + ", please only use the correct letters as listed. Type either R for rectangular or C for circular:");
+ }else if(poolType != "r"){
+  poolType = prompt(name + ", please do not use numbers here. Type either R for rectangular or C for circular:");
+ }else if(poolType != "c"){
+  poolType = prompt(name + ", please do not leave this blank. Type either R for rectangular or C for circular:");
+ }else{
+  console.log(poolType);
+ }
+
+
+
+
+
  poolType = prompt(name+" please type the shape of the pool you have,\ntype R for rectangular or\ntype C for circular.");//Defining poolType be prompting user to type "R" for rectangular or "C" for circular.
 
  if(poolType === "" || poolType != "r" || poolType != "c"){                                                              //Using validating conditionals.                                       //"if statement" within a "while statement" co continue loop and validation.
